@@ -3,6 +3,7 @@
 # レポート課題1: 「チャットボット初号機を作ってみよう」
 提出日：2020-02-07  
 報告者：195738E 知念弘也  
+作業用リポジトリ： [Prog2_Report](https://github.com/hiroya-ie/Prog2_Report.git)
 
 ### 課題概要  
 
