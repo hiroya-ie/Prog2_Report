@@ -23,15 +23,21 @@ public class ChatBot {
 
         System.out.println("入力待ち……"); // 入力を促す説明文
 
-        int count = 0;
-        String txt = in.nextLine();
-        while (!(txt.equals("bye"))) {
+        int count = 0; // 話した回数を数える変数
+        
+        for (int i=0; ; i++) {
+            String txt = in.nextLine();
+            if (txt.equals("bye.")) {
+                count++;
+                System.out.println("茜ちゃん人形作って待ってるね！");
+                System.out.println("今日はプロちゃんとたった" + count + "回しか話してないよ？");
+                break;
+            }
             count++;
             new Judge(txt);
         }
-        count++;
-        System.out.println("茜ちゃん人形作って待ってるね！");
-        System.out.println("今日はプロちゃんとたった" + count + "回しか話してないよ？");
+
+
 
     }
 }
