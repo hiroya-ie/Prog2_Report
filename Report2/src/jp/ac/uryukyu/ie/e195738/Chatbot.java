@@ -21,7 +21,12 @@ public class Chatbot {
      * 処理2: datasetをthis.patternsに保存する。
      */
     public Chatbot(String botname, String[] dataset){
-        /* 実装下さい */
+        this.botname = botname;
+        this.patterns = new ReplyPattern[dataset.length];
+        patterns = new ReplyPattern[3];
+        patterns[0] = new ReplyPattern("greeting", "挨拶文");
+        patterns[1] = new ReplyPattern("other", "想定外時の応答文");
+        patterns[2] = new ReplyPattern("bye.", "終了時の応答文");
     }
 
     /**
@@ -33,7 +38,8 @@ public class Chatbot {
      * @return インデックス
      */
     public int searchPattern(String pattern) {
-        /* 実装下さい */
+
+        return 0;
     }
 
     /**
