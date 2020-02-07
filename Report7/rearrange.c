@@ -25,8 +25,8 @@ void sort(int data[], int out[], int size){
 }
 
 int main(){
-    const int SIZE = 5;
-    int scores[SIZE] = {0, 60, 70, 100, 90};
+    const int SIZE = 6;
+    int scores[SIZE] = {100, 60, 70, 100, 90, 80};
     int result[SIZE];
 
     printf ("sources =");
