@@ -4,6 +4,7 @@ import jp.ac.uryukyu.ie.e195738.Chatbot;
 public class Main {
     public static void main(String[] args){
         String[] dataset = {"greeting\tはい! お呼びですか?",
+                "こんにちは\tこんにちは。何かご用ですか。",
                 "何歳\tそれはおもしろい質問ですね。",
                 "歌って\tすみませんが、それはできません。",
                 "おみくじ\tえっと…ラッキーアイテムは、MacBookだと書いてありますよ。",
