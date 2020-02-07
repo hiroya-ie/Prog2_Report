@@ -23,10 +23,10 @@ public class Chatbot {
     public Chatbot(String botname, String[] dataset){
         this.botname = botname;
         this.patterns = new ReplyPattern[dataset.length];
-        patterns = new ReplyPattern[3];
-        patterns[0] = new ReplyPattern("greeting", "挨拶文");
-        patterns[1] = new ReplyPattern("other", "想定外時の応答文");
-        patterns[2] = new ReplyPattern("bye.", "終了時の応答文");
+        for (int i=0; i<dataset.length; i++) {
+            String[] split = dataset[i].split("\t");
+            this.patterns[i] = new ReplyPattern(split[0],split[1]);
+        }
     }
 
     /**
@@ -38,8 +38,17 @@ public class Chatbot {
      * @return インデックス
      */
     public int searchPattern(String pattern) {
-
-        return 0;
+        for (int i=0; i<this.patterns.length; i++) {
+            if (this.patterns[i].equals(pattern)) {
+                return i;
+            }
+        }
+        for (int i=0; i<this.patterns.length; i++) {
+            if (this.patterns[i].equals("other")) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
