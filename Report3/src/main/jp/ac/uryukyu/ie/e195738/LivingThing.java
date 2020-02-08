@@ -32,10 +32,6 @@ public class LivingThing {
         return name;
     }
 
-    public void setName(String char_name){
-        name = char_name;
-    }
-
     public int getHitPoint(){
         return hitPoint;
     }
